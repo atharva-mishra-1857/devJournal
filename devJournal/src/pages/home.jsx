@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div>
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h1 className="text-2xl font-bold text-white">
             {isViewingOwn ? 'My Journal' : `${viewingUser.name}'s Journal`}
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
 
         {/* Toggle to switch whose feed you're viewing */}
-        <div className="flex items-center gap-1 bg-[#1a1d27] border border-gray-800 rounded-full p-1">
+        <div className="flex items-center gap-1 bg-[#1a1d27] border border-gray-800 rounded-full p-1 w-full sm:w-auto">
           {USERS.map(user => (
             <button
               key={user.id}
